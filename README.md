@@ -1,4 +1,4 @@
-# Mikrotik External Captive Portal
+# Mikrotik External Captive Portal with RADIUS
 
 The following actions are required to use the code given in this repo:
 
@@ -8,8 +8,8 @@ Suppose your domain is `hotspot.example.com`. It can be setup like this:
 
 ```
 cd /var/www
-git clone https://github.com/splash-networks/mikrotik-yt-portal
-mv mikrotik-yt-portal hotspot.example.com
+git clone https://github.com/splash-networks/mikrotik-yt-radius-portal
+mv mikrotik-yt-radius-portal hotspot.example.com
 cd /var/www/hotspot.example.com
 ```
 
