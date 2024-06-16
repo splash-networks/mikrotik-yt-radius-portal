@@ -60,7 +60,7 @@ if ($result->num_rows >= 1) {
                 <form method="post" action="connect.php">
                     <div class="field">
                         <div class="control has-icons-left">
-                            <input class="input" type="text" id="form_font" name="fname" placeholder="First Name" required>
+                            <input class="input" type="text" id="form_font" name="uname" placeholder="Username" required>
                             <span class="icon is-small is-left">
                                 <i class="fas fa-user"></i>
                             </span>
@@ -68,17 +68,9 @@ if ($result->num_rows >= 1) {
                     </div>
                     <div class="field">
                         <div class="control has-icons-left">
-                            <input class="input" type="text" id="form_font" name="lname" placeholder="Last Name" required>
+                            <input class="input" type="password" id="form_font" name="pass" placeholder="Password" required>
                             <span class="icon is-small is-left">
                                 <i class="fas fa-user"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control has-icons-left">
-                            <input class="input" type="email" id="form_font" name="email" placeholder="Email" required>
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-envelope"></i>
                             </span>
                         </div>
                     </div>
