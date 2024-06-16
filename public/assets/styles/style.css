@@ -49,6 +49,26 @@ a:link
   margin: 0;
 }
 
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-toggle-icon i {
+  font-size: 18px;
+  line-height: 1;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.password-toggle-icon i:hover {
+  color: #000;
+}
+
 /* Media Query for iPads */
 
 @media only screen 

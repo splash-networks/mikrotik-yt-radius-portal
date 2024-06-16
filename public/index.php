@@ -1,32 +1,32 @@
 <?php
-
-require 'header.php';
-include 'config.php';
-
-$_SESSION["mac"] = $_POST['mac'];
-$_SESSION["ip"] = $_POST['ip'];
-$_SESSION["link-login"] = $_POST['link-login'];
-$_SESSION["link-login-only"] = $_POST['link-login-only'];
-
-$_SESSION["user_type"] = "new";
-
-# Checking DB to see if user exists or not.
-
-mysqli_report(MYSQLI_REPORT_OFF);
-$result = mysqli_query($con, "SELECT * FROM `$table_name` WHERE mac='$_SESSION[mac]'");
-
-if ($result->num_rows >= 1) {
-  $row = mysqli_fetch_array($result);
-
-  mysqli_close($con);
-
-  $_SESSION["user_type"] = "repeat";
-//  header("Location: welcome.php");
-} else {
-  mysqli_close($con);
-}
-
-?>
+//
+//require 'header.php';
+//include 'config.php';
+//
+//$_SESSION["mac"] = $_POST['mac'];
+//$_SESSION["ip"] = $_POST['ip'];
+//$_SESSION["link-login"] = $_POST['link-login'];
+//$_SESSION["link-login-only"] = $_POST['link-login-only'];
+//
+//$_SESSION["user_type"] = "new";
+//
+//# Checking DB to see if user exists or not.
+//
+//mysqli_report(MYSQLI_REPORT_OFF);
+//$result = mysqli_query($con, "SELECT * FROM `$table_name` WHERE mac='$_SESSION[mac]'");
+//
+//if ($result->num_rows >= 1) {
+//  $row = mysqli_fetch_array($result);
+//
+//  mysqli_close($con);
+//
+//  $_SESSION["user_type"] = "repeat";
+////  header("Location: welcome.php");
+//} else {
+//  mysqli_close($con);
+//}
+//
+//?>
 <!doctype html>
 <html>
 
@@ -60,7 +60,7 @@ if ($result->num_rows >= 1) {
                 <form method="post" action="connect.php">
                     <div class="field">
                         <div class="control has-icons-left">
-                            <input class="input" type="text" id="form_font" name="uname" placeholder="Username" required>
+                            <input class="input" type="text" name="uname" placeholder="Username" required>
                             <span class="icon is-small is-left">
                                 <i class="fas fa-user"></i>
                             </span>
@@ -68,9 +68,12 @@ if ($result->num_rows >= 1) {
                     </div>
                     <div class="field">
                         <div class="control has-icons-left">
-                            <input class="input" type="password" id="form_font" name="pass" placeholder="Password" required>
+                            <input class="input" type="password" id="password" name="pass" placeholder="Password" required>
                             <span class="icon is-small is-left">
                                 <i class="fas fa-key"></i>
+                            </span>
+                            <span class="password-toggle-icon ">
+                                <i class="fas fa-eye"></i>
                             </span>
                         </div>
                     </div>
@@ -92,5 +95,21 @@ if ($result->num_rows >= 1) {
         </section>
     </div>
 </div>
+<script type="text/javascript">
+    const passwordField = document.getElementById("password");
+    const togglePassword = document.querySelector(".password-toggle-icon i");
+
+    togglePassword.addEventListener("click", function () {
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            togglePassword.classList.remove("fa-eye");
+            togglePassword.classList.add("fa-eye-slash");
+        } else {
+            passwordField.type = "password";
+            togglePassword.classList.remove("fa-eye-slash");
+            togglePassword.classList.add("fa-eye");
+        }
+    });
+</script>
 </body>
 </html>
