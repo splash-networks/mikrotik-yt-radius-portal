@@ -70,7 +70,7 @@ if ($result->num_rows >= 1) {
                         <div class="control has-icons-left">
                             <input class="input" type="password" id="form_font" name="pass" placeholder="Password" required>
                             <span class="icon is-small is-left">
-                                <i class="fas fa-user"></i>
+                                <i class="fas fa-key"></i>
                             </span>
                         </div>
                     </div>
