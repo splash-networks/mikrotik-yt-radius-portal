@@ -67,12 +67,12 @@ if ($result->num_rows >= 1) {
                         </div>
                     </div>
                     <div class="field">
-                        <div class="control has-icons-left">
+                        <div class="control has-icons-left has-icons-right">
                             <input class="input" type="password" id="password" name="pass" placeholder="Password" required>
                             <span class="icon is-small is-left">
                                 <i class="fas fa-key"></i>
                             </span>
-                            <span class="password-toggle-icon ">
+                            <span class="icon is-small is-right password-toggle-icon">
                                 <i class="fas fa-eye"></i>
                             </span>
                         </div>
